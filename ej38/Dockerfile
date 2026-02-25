@@ -1,3 +1,4 @@
-FROM php:7.4-apache
+FROM debian
+RUN apt update && apt install -y apache2 libapache2-mod-php php 
 COPY app/ /var/www/html/
-EXPOSE 80
+CMD ["apache2ctl", "-D", "FOREGROUND"]

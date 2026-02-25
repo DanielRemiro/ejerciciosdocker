@@ -1,4 +1,4 @@
-.docker network create red_31  
+docker network create red_31  
 docker run -dit --name equipo1 --network red_31 alpine
 docker run -dit --name equipo2 --network red_31 alpine
 docker exec equipo1 ping -c 3 equipo2  
